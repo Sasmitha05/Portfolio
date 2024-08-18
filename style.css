@@ -1,0 +1,457 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: Roboto, sans-serif, Arial;
+}
+
+html, body {
+    font-size: 14px;
+    font-weight: 400;
+    background: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('D:/portfolio/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-font {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #055c96;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Layout Classes */
+.width-33, .width-66, .width-50, .width-60 {
+    float: left;
+}
+
+.width-33 {
+    width: 33%;
+}
+
+.width-66 {
+    width: 66%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-60 {
+    width: 60%; /* Adjusted to fit better */
+    float: right;
+}
+
+/* Main Panel */
+.main-panel {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    height: 100vh;
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.span-col {
+    color: #055c96;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #262626;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #055c96
+}
+
+/* Fixed Top */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    float: left;
+    margin-top: 25vh;
+}
+
+.banner-section h1 {
+    font-size: 3rem; /* Responsive unit */
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.banner-section h2 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.banner-section a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #055c96;
+    color: #055c96;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    transition: background 0.3s ease;
+}
+
+.banner-section a:hover {
+    background: #055c96;
+    color: #fff;
+}
+
+.main-panel img {
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 10%;
+}
+
+/* Main Section */
+.main-section {
+    width: 100%;
+    float: left;
+    padding: 110px 0;
+}
+
+.width-100 {
+    width: 100%;
+    float: left;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+/* Heading Text */
+.heading-text {
+    width: 100%;
+    float: left;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #055c96;
+}
+
+/* About Us Section */
+.about-img {
+    width: 100px;
+    height: 400px;
+    padding: 0 50px;
+    margin-top: 20px;
+    float:right;
+}
+
+.about-us {
+    width: 100%;
+    padding: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 27px;
+    float:right;
+}
+
+/* Skill Section */
+.skill {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.skill span {
+    float: right;
+}
+
+.skill div {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    background: #e7e7e7;
+    border-radius: 10px;
+}
+
+.skill div span {
+    background: #055c96;
+    height: 5px;
+    float: left;
+}
+
+/* Progress Bar */
+div[role="progressbar"] {
+    color: #055c96;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    --pgPercentage: var(--value);
+    background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+        conic-gradient(#055c96 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+}
+
+/* Backgrounds */
+/*****EXPERIENCE SECTION*****/
+.bg-lightgrey {
+	background-color: #1a1a1a;
+}
+
+.edu-exp {
+    padding: 10px 0;
+    width: 48%;
+    margin: 1% auto; /* Center the element */
+    padding-left: 10px;
+}
+
+.experience-list {
+	width: 100%;
+	float: left;
+	padding: 30px 10px;
+	background: #262626;
+	margin-bottom: 20px;
+}
+.experience-content {
+	width: 100%;
+	float: left;
+	margin-left: 10px;
+}
+.experience-content h2 {
+
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.experience-content h3 {
+	color: #055c96;
+	font-weight: 500;
+	margin-bottom: 2px;
+	font-size: 17px;
+}
+.experience-content p {
+	font-size: 15px;
+}
+/* Service Section */
+.service-list {
+    padding: 40px;
+    margin-top: 35px;
+    background: #262626;
+    border-radius: 15px;
+    width: 94%;
+    float: left;
+}
+
+.service-list i {
+    font-size: 50px;
+    color: #055c96;
+    width: 70px;
+    float: left;
+}
+
+.service-list h3 {
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.service-list p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+/* Last Section */
+.last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.last .width-50 {
+    max-width: 600px; /* Adjust the width as per your design */
+}
+
+/* Contact Us Section */
+.contact form {
+    width: 66%;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #a1a1a1;
+    box-sizing: border-box;
+}
+
+.contact textarea {
+    height: 80px;
+}
+
+.contact button {
+    width: 100%;
+    padding: 10px;
+    background: #055c96;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #033f72;
+}
+
+.contact h3 {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 60px;
+    color: #055c96;
+}
+
+.contact h4 {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #000;
+    padding: 30px 0 40px 0;
+    width: 100%;
+    float: left;
+}
+
+.footer-sect {
+    color: #b3b3b3;
+}
+
+.footer-sect a {
+    color: #b3b3b3;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.social-icon a i {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #055c96;
+    color: #055c96;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .width-33, .width-66, .width-50, .width-60 {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .container {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .banner-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-section h2 {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        padding: 0;
+    }
+
+    .edu-exp {
+        width: 100%;
+        padding-left: 0;
+    }
+}
