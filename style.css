@@ -13,7 +13,9 @@ html, body {
     background: #000;
     color: #fff;
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
+
 @font-face {
     font-family: 'Cinzel Decorative';
     src: url('D:/portfolio/CinzelDecorative-Regular.ttf') format('truetype');
@@ -77,39 +79,67 @@ html, body {
 }
 
 /* Navbar */
+/* Fixed Navbar CSS */
 .navbar {
     background-color: #262626;
     color: #fff;
     padding: 1rem;
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-.navbar-brand {
-    font-weight: bold;
+.navbar .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 40px;
+    font-weight: 600;
+    flex: 0 0 auto;
 }
 
 .nav {
     list-style: none;
     margin: 0;
-    padding: 5px;
+    padding: 0;
     display: flex;
+    gap: 2rem;
     font-size: 1.2rem;
-    justify-content: space-between;
+}
+
+.nav-item {
+    list-style: none;
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
     transition: color 0.2s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
-    color: #055c96
+    color: #055c96;
 }
 
+/* Remove the width classes from navbar items */
+.navbar .width-33,
+.navbar .width-60 {
+    width: auto;
+    float: none;
+}
+
+/* Add top margin to account for fixed navbar */
+body {
+    padding-top: 80px;
+}
 /* Fixed Top */
 .fixed-top {
     position: fixed;
@@ -194,12 +224,12 @@ html, body {
 
 /* About Us Section */
 .about-img {
-    width: 100px;
-    height: 400px;
-    padding: 0 50px;
-    margin-top: 20px;
-    float:right;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    float: right;
 }
+
 
 .about-us {
     width: 100%;
@@ -292,7 +322,9 @@ div[role="progressbar"] {
 .experience-content p {
 	font-size: 15px;
 }
-/* Service Section */
+/* Updated CSS for consistent container sizing */
+
+/* Service Section - Ensure consistent sizing for all containers */
 .service-list {
     padding: 40px;
     margin-top: 35px;
@@ -300,6 +332,8 @@ div[role="progressbar"] {
     border-radius: 15px;
     width: 94%;
     float: left;
+    min-height: 220px; /* Increased for better consistency */
+    box-sizing: border-box;
 }
 
 .service-list i {
@@ -307,30 +341,43 @@ div[role="progressbar"] {
     color: #055c96;
     width: 70px;
     float: left;
+    margin-right: 20px;
 }
 
 .service-list h3 {
     font-size: 28px;
     margin-top: 8px;
     margin-bottom: 15px;
+    margin-left: 90px;
+    line-height: 1.2;
 }
 
 .service-list p {
     font-size: 15px;
     line-height: 25px;
+    margin-left: 90px;
+    text-align: justify;
 }
 
-/* Last Section */
-.last {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+/* Width classes for proper two-column layout */
+.width-50 {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
-.last .width-50 {
-    max-width: 600px; /* Adjust the width as per your design */
+
+/* Container clearfix */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Icon fixes for FontAwesome 4.7.0 */
+.fa-lightbulb-o:before {
+    content: "\f0eb";
 }
 
 /* Contact Us Section */
@@ -454,4 +501,118 @@ div[role="progressbar"] {
         width: 100%;
         padding-left: 0;
     }
+    /* Project Modals CSS - Separate stylesheet for modal functionality */
+
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: block;
+}
+
+/* Modal Content Container */
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #666;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: #055c96;
+  text-decoration: none;
+}
+
+/* Modal Header */
+ /* Project Modals CSS - Separate stylesheet for modal functionality */
+
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: block;
+}
+
+/* Modal Content Container */
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #666;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: #055c96;
+  text-decoration: none;
+}
 }

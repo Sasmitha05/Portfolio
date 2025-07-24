@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
 </head>
 <body>
   <div class="main-panel">
     <div class="width-66">
-      <nav class="navbar fixed-top">
+      <nav class="navbar">
         <div class="container">
           <div class="width-33 logo">
             Sas<span class="custom-font">mitha</span>
@@ -21,48 +22,67 @@
               <li class="nav-item"><a href="#about" class="nav-link">Prologue</a></li>
               <li class="nav-item"><a href="#education" class="nav-link">Learning pathway</a></li>
               <li class="nav-item"><a href="#skills" class="nav-link">Capabilities</a></li>
-              <li class="nav-item"><a href="#projects" class="nav-link">Endeavors</a></li>
+              <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+              <li class="nav-item"><a href="#endeavors" class="nav-link">Endeavors</a></li>
               <li class="nav-item"><a href="#contact" class="nav-link">Get in touch</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </div>  
+    
     <section id="home">
-      <div class="container ">
+      <div class="container">
         <div class="width-50">
           <div class="banner-section">
-            <h1>SASMITHA <span class="span-col">K</span>
-            </h1>
+            <h1>SASMITHA <span class="span-col">K</span></h1>
             <h2>- I'm a Computer Science and Business Systems Student.</h2>
-            <a href="#">
+            <h2>
+              Curious mind. Passionate learner. Technology enthusiast with a love for solving real-world problems. 
+            </h2>
+
+            <a href="https://www.linkedin.com/in/sasmitha-kathiravan" target="_blank">
               <i class="fa fa-linkedin"></i>
             </a>
-            <a href=https://github.com/Sasmitha05>
+            <a href="https://github.com/Sasmitha05" target="_blank">
               <i class="fa fa-github"></i>
             </a>
           </div>
         </div>
         <div class="width-50">
-          <img src="sasmitha.jpg">
+          <img src="sasmitha.jpg" alt="Sasmitha photo">
+        </div>
         </div>
       </div>
     </section>
+    
     <section id="about">
       <div class="main-section bg-black">
         <div class="container">
           <div class="width-50">
-            <img src="sasmitha2.jpg" class="about-img">
+            <img src="sasmitha2.jpeg" class="about-img" alt="Sasmitha profile photo">
           </div>
           <div class="width-50">
             <div class="about-us">
               <h2 class="heading-text">Prologue</h2>
-              <p>Hi, I'm Sasmitha.I'm currently exploring the intersection of technology and business as a Computer Science and Business Systems student. My passion lies in leveraging the power of coding and strategic thinking to create solutions that drive innovation and efficiency in the tech-driven world.</p>
+              <p>
+                Hello, I'm Sasmitha — a Computer Science and Business Systems student with a strong interest in the dynamic intersection of technology and business.
+              </p>
+              <p>
+                I'm a passionate and purpose-driven individual committed to building systems that matter, ones that make a real impact on users and organizations alike.
+              </p>
+              <p>
+                I thrive on learning, leading, and collaborating. With a focus on detail and planning, I enjoy transforming ideas into efficient, scalable solutions.
+              </p>
+              <p>
+                Whether it's coding, analyzing problems, or organizing a team effort, I bring integrity, curiosity, and a mindset rooted in growth.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="education">
       <div class="main-section bg-black">
         <h2 class="heading-text">My Learning pathway</h2>
@@ -87,7 +107,7 @@
             <div class="experience-list">
               <div class="experience-content">
                 <h2>KIT-Kalaignar Karunanidhi Institute Of Technology</h2>
-                <h3>2023-present</h3>
+                <h3>2022-present</h3>
                 <p>Bachelor of Technology in Computer Science and Business Systems</p>
                 <h3>8.53 CGPA</h3>
               </div>
@@ -96,6 +116,7 @@
         </div>
       </div>
     </section>
+    
     <section id="skills">
       <div class="main-section">
         <div class="container">
@@ -147,43 +168,88 @@
         </div>
       </div>
     </section> 
+    
     <section id="projects"> 
+      <div class="main-section bg-black">
+        <div class="container">
+          <h2 class="heading-text">My Projects</h2>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-shopping-cart"></i>
+              <h3>August Attic - Fan Merch Shop</h3>
+              <p>A full-stack e-commerce platform designed for music fans to purchase merchandise. Features include Spotify API integration for music streaming, secure payment processing, and cloud-based image storage for optimal performance.</p>
+              <button class="demo-btn" onclick="openModal('august-attic-video')">
+                <i class="fa fa-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-sign-language"></i>
+              <h3>Tamil Speech to Sign Language</h3>
+              <p>An accessibility-focused web application that converts Tamil speech to sign language in real-time. The system uses advanced speech recognition technology and displays corresponding sign language gestures through animated GIFs.</p>
+              <button class="demo-btn" onclick="openModal('sign-language-video')">
+                <i class="fa fa-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-image"></i>
+              <h3>Web-Based Image Editor</h3>
+              <p>A comprehensive online image editing tool that allows users to upload, edit, and download images with various filters and effects. Features include brightness, contrast, saturation adjustments, and real-time preview capabilities.</p>
+              <button class="demo-btn" onclick="openModal('image-editor-video')">
+                <i class="fa fa-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-film"></i>
+              <h3>Movie Watchlist App Demo</h3>
+              <p>A modern React-based movie tracking application that enables users to manage their personal movie watchlist with real-time search, custom categorization, and persistent local storage.</p>
+              <button class="demo-btn" onclick="openModal('movie-watchlist')">
+                <i class="fa fa-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="endeavors"> 
       <div class="main-section">
         <div class="container">
           <h2 class="heading-text">My Endeavors</h2>
           
           <div class="width-50">
             <div class="service-list">
-              <i class="fa fa-certificate"></i>
-              <h3>NPTEL Certificate in Problem Solving in C</h3>
-              <p>Successfully completed the NPTEL course with a focus on problem-solving using C.</p>
+              <i class="fa fa-lightbulb-o"></i>
+              <h3>Smart India Hackathon Participant</h3>
+              <p>Selected at the college level for the Smart India Hackathon (September 2024), demonstrating innovative problem-solving skills.</p>
             </div>
           </div>
           
           <div class="width-50">
             <div class="service-list">
               <i class="fa fa-trophy"></i>
-              <h3>First Prize in Connexion Competition</h3>
-              <p>Secured first place in the Connexion competition at SNS College of Engineering and Technology.</p>
-            </div>
-          </div>
-          
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-flask"></i>
-              <h3>Workshop on React JS and Flask</h3>
-              <p>Attended a comprehensive workshop on React JS and Flask at PSG iTech.</p>
+              <h3>First Prize in Connexion Game</h3>
+              <p>Achieved first place in the Connexion game at SNS Colors - A National Design Thinking Contest and Festival (September 2023).</p>
             </div>
           </div>
           
           <div class="width-50">
             <div class="service-list">
               <i class="fa fa-code"></i>
-              <h3>Inplant Training in Web Development</h3>
-              <p>Completed a 7-day inplant training on web development at CodeBind Technologies, Coimbatore.</p>
+              <h3>Fullstack Simplified Workshop</h3>
+              <p>Participated in a full-stack development workshop at Yukta (A National level Technical Symposium) at PSG iTech (March 2024).</p>
             </div>
           </div>
-          <div class="last">
+          
           <div class="width-50">
             <div class="service-list">
               <i class="fa fa-laptop"></i>
@@ -191,10 +257,42 @@
               <p>Completed a summer internship training on MERN Stack at Live Stream Technologies, Coimbatore.</p>
             </div>
           </div>
-        </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-briefcase"></i>
+              <h3>Inplant Training in Web Development</h3>
+              <p>Completed a 7-day inplant training on web development at CodeBind Technologies, Coimbatore.</p>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-certificate"></i>
+              <h3>NPTEL Certificate in Problem Solving in C</h3>
+              <p>Successfully completed the NPTEL course with a focus on problem-solving using C programming (April 2023).</p>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-code"></i>
+              <h3>The Complete Python Bootcamp</h3>
+              <p>Completed "The Complete Python Bootcamp From Zero to Hero in Python" certification from Udemy (August 2023).</p>
+            </div>
+          </div>
+          
+          <div class="width-50">
+            <div class="service-list">
+              <i class="fa fa-bar-chart"></i>
+              <h3>Python for Data Science - NPTEL</h3>
+              <p>Completed Python for Data Science certification from NPTEL (April 2025).</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>  
+    </section>
+    
     <section id="contact">
       <div class="main-section contact bg-black">
         <div class="container">
@@ -204,71 +302,249 @@
               <input type="text" id="fullName" name="fullName" placeholder="Full Name">
               <input type="email" id="email" name="email" autocomplete="email" placeholder="Email">
               <input type="text" id="mobileno" name="mobileno" placeholder="Mobile No">
-              <textarea id="address" name="address" placeholder="Enter Address"> </textarea>
+              <textarea id="address" name="address" placeholder="Enter Address"></textarea>
               <button type="submit">Submit</button>
             </form>
           </div>
           <div class="width-33">
-            <h3>
-              <i class="fa fa-map-marker"></i>
-            </h3>
+            <h3><i class="fa fa-map-marker"></i></h3>
             <h4>Address</h4>
-            <p>xxxx</p>
+            <p>Coimbatore, Tamil Nadu</p>
           </div>
           <div class="width-33">
-            <h3>
-              <i class="fa fa-phone"></i>
-            </h3>
+            <h3><i class="fa fa-phone"></i></h3>
             <h4>Phone</h4>
-            <p>yyyyy</p>
+            <p>+91 8220895170</p>
           </div>
           <div class="width-33">
-            <h3>
-              <i class="fa fa-envelope-o"></i>
-            </h3>
+            <h3><i class="fa fa-envelope-o"></i></h3>
             <h4>Email</h4>
-            <p>example@gmail.com</p>
+            <p>sasmithakathiravan05@gmail.com</p>
           </div>
         </div>
       </div>
     </section>
+    
     <div class="footer">
       <div class="container">
         <div class="footer-sect social-icon width-50">
-          <a href="#">
-            <i class="fa fa-twitter"></i>
+          <a href="https://github.com/Sasmitha05" target="_blank">
+            <i class="fa fa-github"></i>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/sasmitha-kathiravan" target="_blank">
             <i class="fa fa-linkedin"></i>
           </a>
-          <a href="#">
-            <i class="fa fa-instagram"></i>
-          </a>
         </div>
-        <div class="footer-sect mt-20 width-50">CopyRight © Sasmitha 2023 . All Rights Reserved</div>
+        <div class="footer-sect mt-20 width-50">CopyRight © Sasmitha 2024 . All Rights Reserved</div>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-          link.addEventListener('click', event => {
-            event.preventDefault();
-            console.log('Link clicked:', link);  // Debugging: Confirm link is clicked
-            const targetId = link.getAttribute('href').substring(1);
-            console.log('Target ID:', targetId);  // Debugging: Confirm target ID
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-              console.log('Scrolling to:', targetElement);  // Debugging: Confirm element found
-              window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-              });
-            } else {
-              console.log('Target element not found:', targetId);  // Debugging: If element not found
-            }
+  </div>
+
+  <!-- Video Modals --> 
+  <div id="august-attic-video" class="modal"> 
+    <div class="modal-content"> 
+      <span class="close" onclick="closeModal('august-attic-video')">&times;</span> 
+      <h3>August Attic - Fan Merch Shop Demo</h3> 
+      <div class="video-container"> 
+        <div class="video-placeholder"> 
+          <h4>Project Overview:</h4>
+          <p>August Attic is a comprehensive e-commerce platform specifically designed for music fans to discover and purchase Taylor swift's merchandise. The platform combines the shopping experience with music discovery through Spotify integration.</p>
+          
+          <h4>Key Features:</h4> 
+          <ul> 
+            <li>🛒 Full-stack e-commerce platform built with MERN Stack</li> 
+            <li>🎵 Integrated Spotify API for music streaming while shopping</li> 
+            <li>☁️ Cloudinary integration for optimized image storage and delivery</li> 
+            <li>👤 User authentication and profile management</li>
+            <li>🛍️ Shopping cart functionality</li>
+          </ul> 
+          
+          <h4>Technical Implementation:</h4>
+          <p><strong>Frontend:</strong> React.js with modern hooks, Redux for state management, Material-UI for components</p>
+          <p><strong>Backend:</strong> Node.js with Express.js, JWT authentication, RESTful API design</p>
+          <p><strong>Database:</strong> MongoDB with Mongoose ODM for data modeling</p>
+          <p><strong>External APIs:</strong> Spotify Web API, Cloudinary API</p>
+          <video controls width="100%">
+            <source src="videos/august-attic.webm" type="video/webm">
+          </video>
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+
+  <div id="sign-language-video" class="modal"> 
+    <div class="modal-content"> 
+      <span class="close" onclick="closeModal('sign-language-video')">&times;</span> 
+      <h3>Tamil Speech to Sign Language Demo</h3> 
+      <div class="video-container"> 
+        <div class="video-placeholder"> 
+          <h4>Project Overview:</h4>
+          <p>This innovative web application bridges the communication gap between hearing and hearing-impaired individuals by converting Tamil speech into visual sign language representations in real-time.</p>
+          
+          <h4>Key Features:</h4> 
+          <ul> 
+            <li>🎤 Real-time Tamil speech recognition using Web Speech API</li> 
+            <li>🤟 Automated conversion to Tamil sign language gestures</li> 
+            <li>🎬 High-quality GIF-based sign language animation display</li> 
+            <li>♿ Accessibility-focused design for hearing-impaired users</li> 
+            <li>📚 Comprehensive Tamil sign language dictionary</li>
+          </ul> 
+          
+          <h4>Technical Implementation:</h4>
+          <p><strong>Speech Recognition:</strong> Web Speech API with Tamil language support and custom vocabulary</p>
+          <p><strong>Sign Language Database:</strong> Custom-built library of Tamil sign language gestures</p>
+          <p><strong>Animation System:</strong> Optimized GIF rendering with smooth transitions</p>
+          <p><strong>Backend Processing:</strong> Node.js for text processing and gesture mapping</p>
+          <video controls width="100%">
+            <source src="videos/sign-language-demo.webm" type="video/webm">
+          </video>
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+
+  <div id="image-editor-video" class="modal"> 
+    <div class="modal-content"> 
+      <span class="close" onclick="closeModal('image-editor-video')">&times;</span> 
+      <h3>Web-Based Image Editor Demo</h3> 
+      <div class="video-container"> 
+        <div class="video-placeholder"> 
+          <h4>Project Overview:</h4>
+          <p>A powerful, browser-based image editing application that provides professional-grade editing tools without requiring any software installation. Perfect for quick edits and professional touch-ups.</p>
+          
+          <h4>Key Features:</h4> 
+          <ul> 
+            <li>📤 Drag & drop or file input image upload (supports multiple formats)</li> 
+            <li>🎨 One-click filters: Grayscale, Black & White, Vintage, Contrast</li> 
+            <li>🖼️ Real-time canvas-based image rendering and editing</li> 
+            <li>🔄 Reset to original image without re-uploading</li> 
+            <li>💾 Save/download edited images as PNG</li> 
+            <li>🧠 Simple and intuitive UI with stylish design</li> 
+            <li>⚡ Fast in-browser processing — no server needed</li> 
+            <li>🧪 Easily extendable for advanced features (e.g., hue, blur, resize)</li> 
+          </ul>
+
+          
+          <h4>🔧 Technical Implementation</h4>
+          <ul>
+            <li><strong>🖼️ Canvas API:</strong> Utilizes HTML5 Canvas for real-time image rendering and pixel-level manipulation.</li>
+            <li><strong>📂 File Handling:</strong> Leverages the FileReader API to load and preview local images without server dependency.</li>
+            <li><strong>🧪 Image Processing:</strong> Applies custom JavaScript logic to implement filters like grayscale, contrast, vintage, and more.</li>
+            <li><strong>🎨 UI/UX Design:</strong> Responsive layout with clearly structured tool panels for smooth user interaction.</li>
+            <li><strong>⚙️ Performance:</strong> Efficient processing pipeline ensures smooth handling of large, high-resolution images in-browser.</li>
+            <li><strong>🚀 Deployment:</strong>https://image-editor-phi-eight.vercel.app/</li>
+          </ul>
+          <video controls width="100%">
+            <source src="videos/image-editor.webm" type="video/webm">
+          </video>
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+
+  <div id="movie-watchlist" class="modal"> 
+  <div class="modal-content"> 
+    <span class="close" onclick="closeModal('movie-watchlist')">&times;</span> 
+    <h3>Movie Watchlist App Demo</h3> 
+    <div class="video-container"> 
+      <div class="video-placeholder"> 
+        <h4>Project Overview:</h4>
+        <p>A modern React-based movie tracking application that enables users to manage their personal movie watchlist with real-time search, custom categorization, and persistent local storage.</p>
+        
+        <h4>Key Features:</h4> 
+        <ul> 
+          <li>🎬 Add movies to Watchlist or Watched sections with a single click</li> 
+          <li>📂 Two-panel layout: "Watchlist" and "Watched"</li>
+          <li>🗑️ Remove movies </li>
+          <li>💾 Persistent storage using browser's LocalStorage</li>
+          <li>⚙️ Global state management using React Context API</li>
+        </ul> 
+        
+        <h4>Technical Implementation:</h4>
+        <p><strong>Framework:</strong> React.js with functional components and hooks</p>
+        <p><strong>State Management:</strong> Context API with useReducer for scalable global state</p>
+        <p><strong>API Integration:</strong> OMDb API for fetching movie data (title, poster, year)</p>
+        <p><strong>Persistence:</strong> LocalStorage for maintaining user data across sessions</p>
+        <p><strong>Architecture:</strong> Component-based design with separation of concerns</p>
+        <p><strong>Deployment:</strong> Easily deployable to GitHub Pages or Netlify</p>
+        <video controls width="100%">
+          <source src="videos/movie-watchlist.webm" type="video/webm">
+        </video>
+      </div> 
+    </div> 
+  </div> 
+</div>
+
+
+  <script>
+    // Modal functionality with improved error handling
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        // Add show class for animation
+        setTimeout(() => {
+          modal.classList.add('show');
+        }, 10);
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 300);
+      }
+    }
+
+    // Close modals when clicking outside
+    window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal')) {
+        const modalId = event.target.id;
+        closeModal(modalId);
+      }
+    });
+
+    // Close modals with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const openModals = document.querySelectorAll('.modal.show');
+        openModals.forEach(modal => {
+          closeModal(modal.id);
+        });
+      }
+    });
+
+    // Add smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
           });
+        }
+      });
+    });
+
+    // Demo button hover effects
+    document.addEventListener('DOMContentLoaded', function() {
+      const demoBtns = document.querySelectorAll('.demo-btn');
+      demoBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-2px)';
+        });
+        btn.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
         });
       });
-    </script>    
+    });
+  </script>
 </body>
 </html>
